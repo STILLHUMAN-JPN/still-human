@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap');
+
 :root{
   --bg:#050607;
   --panel:#0b0d12;
@@ -7,9 +9,152 @@
   --accent:#f1f3f6;
 }
 
+*{box-sizing:border-box}
+
 body{
   margin:0;
   background:var(--bg);
   color:var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing:0.02em;
+  line-height:1.6;
+}
+
+a{color:var(--text);text-decoration:none}
+
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px 0;
+  border-bottom:1px solid var(--line);
+  background:rgba(5,6,7,.9);
+  backdrop-filter:blur(10px);
+}
+
+.logo{
+  font-weight:800;
+  letter-spacing:0.25em;
+}
+
+.tag{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:4px;
+}
+
+.nav a{
+  margin-left:20px;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.nav a:hover{color:var(--text)}
+
+.hero{
+  padding:140px 0 100px;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(800px 300px at 50% 0%, rgba(255,255,255,.08), transparent),
+    linear-gradient(#050607,#050607);
+  text-align:center;
+}
+
+.hero h1{
+  font-size:64px;
+  letter-spacing:0.12em;
+  line-height:1.05;
+  margin-bottom:30px;
+}
+
+.hl{
+  border-bottom:2px solid var(--accent);
+}
+
+.lead{
+  color:var(--muted);
+  font-size:18px;
+  margin-bottom:40px;
+}
+
+.btn{
+  display:inline-block;
+  padding:14px 28px;
+  border:1px solid var(--text);
+  margin:0 10px;
+  border-radius:30px;
+  font-weight:700;
+  letter-spacing:0.08em;
+}
+
+.btn:hover{
+  background:var(--text);
+  color:#050607;
+}
+
+.section{
+  padding:100px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.section h2{
+  text-align:center;
+  letter-spacing:0.2em;
+  margin-bottom:50px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px;
+}
+
+.product{
+  padding:40px 30px;
+  border:1px solid var(--line);
+  background:rgba(11,13,18,.8);
+  border-radius:20px;
+  text-align:center;
+}
+
+.badge{
+  font-size:11px;
+  letter-spacing:0.2em;
+  color:var(--muted);
+}
+
+.product h3{
+  margin:15px 0 5px;
+  letter-spacing:0.15em;
+}
+
+.sub{
+  font-size:13px;
+  color:var(--muted);
+  margin-bottom:15px;
+}
+
+.product p{
+  font-size:14px;
+  color:var(--muted);
+}
+
+.plink{
+  display:inline-block;
+  margin-top:20px;
+  font-size:13px;
+  letter-spacing:0.15em;
+}
+
+.plink:hover{
+  opacity:.7;
+}
+
+.footer{
+  padding:40px 0;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
 }
